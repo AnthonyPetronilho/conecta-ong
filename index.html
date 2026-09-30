@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conecta ONG: plataforma acessível para aproximar voluntários de projetos sociais." />
+  <title>Conecta ONG | Voluntariado acessível</title>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="#inicio" aria-label="Conecta ONG - página inicial">Conecta ONG</a>
+      <nav aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#voluntariado">Voluntariado</a></li>
+        </ul>
+      </nav>
+      <button id="contrastToggle" class="contrast-button" type="button" aria-pressed="false" aria-label="Ativar modo de alto contraste">Alto contraste</button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section id="inicio" class="hero" aria-labelledby="titulo-principal">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Tecnologia com impacto social</p>
+          <h1 id="titulo-principal">Encontre uma forma simples de ajudar</h1>
+          <p>Conheça iniciativas sociais e cadastre seu interesse em participar como voluntário.</p>
+          <a class="primary-link" href="#projetos">Conhecer projetos</a>
+        </div>
+        <img src="/src/assets/voluntariado.webp" width="640" height="420" alt="Ilustração de pessoas colaborando em uma ação comunitária" />
+      </div>
+    </section>
+
+    <section id="projetos" class="section" aria-labelledby="titulo-projetos">
+      <div class="container">
+        <p class="eyebrow">Projetos em destaque</p>
+        <h2 id="titulo-projetos">Escolha uma iniciativa</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Inclusão digital</h3>
+            <p>Apoio em oficinas de informática para jovens e adultos.</p>
+            <button class="project-button" type="button" data-project="Inclusão digital">Tenho interesse</button>
+          </article>
+          <article class="card">
+            <h3>Arrecadação solidária</h3>
+            <p>Organização e divulgação de campanhas de alimentos e itens essenciais.</p>
+            <button class="project-button" type="button" data-project="Arrecadação solidária">Tenho interesse</button>
+          </article>
+          <article class="card">
+            <h3>Apoio educacional</h3>
+            <p>Reforço escolar e acompanhamento de atividades para estudantes.</p>
+            <button class="project-button" type="button" data-project="Apoio educacional">Tenho interesse</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="voluntariado" class="section section-alt" aria-labelledby="titulo-formulario">
+      <div class="container form-wrapper">
+        <div>
+          <p class="eyebrow">Participe</p>
+          <h2 id="titulo-formulario">Cadastro de interesse</h2>
+          <p>Preencha os dados abaixo. Os campos marcados como obrigatórios precisam ser informados.</p>
+        </div>
+        <form id="volunteerForm" novalidate aria-describedby="formHelp">
+          <p id="formHelp" class="form-help">Todos os dados são usados apenas para esta demonstração acadêmica.</p>
+
+          <label for="name">Nome completo <span aria-hidden="true">*</span></label>
+          <input id="name" name="name" type="text" autocomplete="name" required aria-required="true" />
+          <span class="error" id="nameError" aria-live="polite"></span>
+
+          <label for="email">E-mail <span aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-required="true" />
+          <span class="error" id="emailError" aria-live="polite"></span>
+
+          <label for="project">Projeto de interesse <span aria-hidden="true">*</span></label>
+          <select id="project" name="project" required aria-required="true">
+            <option value="">Selecione</option>
+            <option>Inclusão digital</option>
+            <option>Arrecadação solidária</option>
+            <option>Apoio educacional</option>
+          </select>
+          <span class="error" id="projectError" aria-live="polite"></span>
+
+          <label for="message">Como você gostaria de contribuir?</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button class="submit-button" type="submit">Enviar interesse</button>
+          <p id="formStatus" class="status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Conecta ONG — Projeto acadêmico de desenvolvimento front-end acessível.</p>
+    </div>
+  </footer>
+</body>
+</html>
